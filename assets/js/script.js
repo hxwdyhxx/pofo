@@ -27,7 +27,7 @@ ScrollTrigger.matchMedia({
 
                     if (curr == 100) {
                         curr = '감사합니다';
-                        img.src = "../assets/images/hear.png";
+                        img.src = "https://raw.githubusercontent.com/hxxppy/pofo/main/assets/images/hear.PNG";
                     } else if (curr >= 80 && curr <= 99) {
                         curr = `${curr}%`
                         img.src = "../assets/images/luck.png";
