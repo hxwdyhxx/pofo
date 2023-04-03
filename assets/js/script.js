@@ -27,25 +27,25 @@ ScrollTrigger.matchMedia({
 
                     if (curr == 100) {
                         curr = '감사합니다';
-                        img.src = "../images/hear.png";
+                        img.src = "../assets/images/hear.png";
                     } else if (curr >= 80 && curr <= 99) {
                         curr = `${curr}%`
-                        img.src = "../images/luck.png";
+                        img.src = "../assets/images/luck.png";
                     } else if (curr >= 60 && curr <= 79) {
                         curr = `${curr}%`
-                        img.src = "../images/ho.png";
+                        img.src = "../assets/images/ho.png";
                     } else if (curr >= 40 && curr <= 59) {
                         curr = `${curr}%`
-                        img.src = "../images/th.png";
+                        img.src = "../assets/images/th.png";
                     } else if (curr >= 15 && curr <= 39) {
                         curr = `${curr}%`
-                        img.src = "../images/la.png";
+                        img.src = "../assets/images/la.png";
                     } else if (curr >= 1 && curr <= 14) {
                         curr = `${curr}%`
-                        img.src = "../images/horr.png";
+                        img.src = "../assets/images/horr.png";
                     } else if (curr == 0) {
                         curr = '안녕하세요';
-                        img.src = "../images/hello.png";
+                        img.src = "../assets/images/hello.png";
                     } else {
                         curr = `${curr}%`
                         img.style.display = 'none'
