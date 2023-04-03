@@ -1,0 +1,300 @@
+.hori-inner {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include mobile-md {
+        flex-direction: row;
+    }
+
+
+}
+
+.section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #0000005e;
+        z-index: 1;
+    }
+
+    img {
+        width: 120%;
+        height: 100%;
+        object-fit: cover;
+        max-width: none;
+
+        @include mobile-md {
+            width: 100%;
+        }
+    }
+}
+
+.title-wrap {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    padding: 5vw;
+    text-align: right;
+
+    word-break: normal;
+
+    gap: 12px;
+
+    h3 {
+
+        font-size: 8vw;
+        font-weight: bold;
+
+        @include mobile-md {
+            font-size: 10vw;
+        }
+    }
+
+    em {
+        font-size: 28px;
+        font-weight: bold;
+        // margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 25px;
+        max-width: 60%;
+        font-family: 'pret';
+        line-height: 1.2;
+    }
+
+    .spec {
+        display: flex;
+        gap: 20px;
+        font-size: 18px;
+        color: #222;
+        margin: 20px 0;
+
+        span {
+            background: #fff;
+            padding: 5px 18px;
+            border-radius: 20px;
+        }
+    }
+
+    .links {
+        font-size: 20px;
+        font-weight: bold;
+
+        a {
+            transition: .2s linear;
+
+            &:hover {
+                color: #dddf53;
+            }
+
+            &+a {
+                margin-left: 10px;
+            }
+        }
+
+
+    }
+}
+
+
+.sec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #dddf53;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/zz.gif);
+        background-position: 0 0;
+        background-size: 250px;
+        opacity: 0.075;
+        pointer-events: none;
+        z-index: 100;
+    }
+
+    .main-title {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        font-size: 5vw;
+        text-transform: uppercase;
+
+        .title {
+            font-weight: 300;
+            line-height: 1.2;
+        }
+
+        .title2 {
+            font-weight: bold;
+            letter-spacing: 20px;
+            font-size: 6vw;
+
+            @include mobile-md {
+                letter-spacing: normal;
+            }
+        }
+
+        .kr {
+            font-family: 'pret';
+            font-weight: 200;
+        }
+
+    }
+
+    .deco {
+        font-size: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        line-height: 1;
+        font-family: 'pret';
+        transform-origin: center;
+        transition: transform 0.5s;
+
+        @include mobile-md {
+            top: 30px;
+        }
+
+        i {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &1 {
+            left: 50%;
+            top: 30px;
+        }
+
+        &2 {
+            top: 70%;
+            left: 10%;
+        }
+
+        &3 {
+            top: 50%;
+            left: 85%;
+        }
+
+        &4 {
+            top: 85%;
+            left: 90%;
+        }
+
+        &5 {
+            top: 20%;
+            left: 20%;
+        }
+
+        &6 {
+            left: 70%;
+            top: 10%;
+        }
+
+        &7 {
+            top: 70%;
+            left: 70%;
+        }
+
+        &8 {
+            top: 90%;
+            left: 47%;
+        }
+
+        &9 {
+            top: 33%;
+            left: 10%;
+        }
+
+        &10 {
+            left: 92%;
+            top: 5%;
+        }
+
+        &11 {
+            top: 5%;
+            left: 10%;
+        }
+
+        &12 {
+            left: 85%;
+            top: 20%;
+        }
+    }
+
+}
+
+.guage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+
+    .curr {
+        width: 0%;
+        height: 100%;
+        display: block;
+        background: #fff;
+    }
+
+    @include mobile-md {
+        display: none;
+    }
+}
+
+.fix-num {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    font-size: 3vw;
+    color: #fff;
+    padding: 20px;
+    font-family: 'pret';
+    font-weight: 300;
+
+    img {
+        display: inline-block;
+        margin-left: 10px;
+        /* 이미지와 글 사이 간격 조정 */
+        vertical-align: text-bottom;
+        /* 이미지 수직 정렬 */
+    }
+
+    @include mobile-md {
+        display: none;
+    }
+}

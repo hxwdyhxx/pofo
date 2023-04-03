@@ -1,0 +1,60 @@
+/*반응형 화면 크기*/
+//중간중간은 분기점? 언제든지 넣을수있다.
+//pc 30 //tablet (x) m(30)
+
+
+
+// 작은피씨
+$desktop: 1200px; //-> [최소]1024
+
+$desktop-lg: 1199px;
+
+// 테블릿 1024~768
+$tablet: 1100px; //[최소]768
+
+// 모바일
+$mobile-md: 768px;
+$mobile: 768px;
+$mobile-sm: 400px;
+
+
+
+
+@mixin desktop-lg{
+    @media (max-width: $desktop-lg){
+      @content;
+    }
+  }
+  
+@mixin desktop{
+    @media (min-width: $desktop){
+      @content;
+    }
+  }
+  
+@mixin tablet{
+    @media (max-width: $tablet){
+        @content;
+    }
+}
+  
+@mixin mobile-lg{
+  @media (max-width: $mobile-lg){
+    @content;
+  }
+}
+@mixin mobile-md{
+  @media (max-width: $mobile-md){
+    @content;
+  }
+}
+@mixin mobile{
+  @media (min-width: $mobile){
+    @content;
+  }
+}
+@mixin mobile-sm{
+  @media (max-width: $mobile-sm){
+    @content;
+  }
+}

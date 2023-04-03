@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/*반응형 화면 크기*/ /* 폰트 셋팅 */
+/*세방고딕*/
+@font-face {
+  font-family: "Nekst";
+  src: url(../font/Nekst-Regular.woff) format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Nekst";
+  src: url(../font/Nekst-Medium.woff) format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Nekst";
+  src: url(../font/Nekst-SemiBold.woff) format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "pret";
+  src: url(../font/Pretendard-Light.woff2) format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "pret";
+  src: url(../font/Pretendard-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "pret";
+  src: url(../font/Pretendard-Medium.woff2) format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "pret";
+  src: url(../font/Pretendard-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, select {
+  border: 0;
+  background-color: transparent;
+}
+
+body {
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: "Nekst", "pret", sans-serif;
+}
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+}
+body::-webkit-scrollbar {
+  /*  스크롤바 막대 너비 설정 */
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  /* 스크롤바 둥글게 설정    */
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: rgba(100, 100, 100, 0.347);
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+@keyframes flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.hori-inner {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .hori-inner {
+    flex-direction: row;
+  }
+}
+
+.section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.368627451);
+  z-index: 1;
+}
+.section img {
+  width: 120%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: none;
+}
+@media (max-width: 768px) {
+  .section img {
+    width: 100%;
+  }
+}
+
+.title-wrap {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  padding: 5vw;
+  text-align: right;
+  word-break: normal;
+  gap: 12px;
+}
+.title-wrap h3 {
+  font-size: 8vw;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .title-wrap h3 {
+    font-size: 10vw;
+  }
+}
+.title-wrap em {
+  font-size: 28px;
+  font-weight: bold;
+}
+.title-wrap p {
+  font-size: 25px;
+  max-width: 60%;
+  font-family: "pret";
+  line-height: 1.2;
+}
+.title-wrap .spec {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #222;
+  margin: 20px 0;
+}
+.title-wrap .spec span {
+  background: #fff;
+  padding: 5px 18px;
+  border-radius: 20px;
+}
+.title-wrap .links {
+  font-size: 20px;
+  font-weight: bold;
+}
+.title-wrap .links a {
+  transition: 0.2s linear;
+}
+.title-wrap .links a:hover {
+  color: #dddf53;
+}
+.title-wrap .links a + a {
+  margin-left: 10px;
+}
+
+.sec1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #dddf53;
+}
+.sec1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/zz.gif);
+  background-position: 0 0;
+  background-size: 250px;
+  opacity: 0.075;
+  pointer-events: none;
+  z-index: 100;
+}
+.sec1 .main-title {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+.sec1 .main-title .title {
+  font-weight: 300;
+  line-height: 1.2;
+}
+.sec1 .main-title .title2 {
+  font-weight: bold;
+  letter-spacing: 20px;
+  font-size: 6vw;
+}
+@media (max-width: 768px) {
+  .sec1 .main-title .title2 {
+    letter-spacing: normal;
+  }
+}
+.sec1 .main-title .kr {
+  font-family: "pret";
+  font-weight: 200;
+}
+.sec1 .deco {
+  font-size: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  line-height: 1;
+  font-family: "pret";
+  transform-origin: center;
+  transition: transform 0.5s;
+}
+@media (max-width: 768px) {
+  .sec1 .deco {
+    top: 30px;
+  }
+}
+.sec1 .deco i {
+  display: block;
+}
+.sec1 .deco img {
+  width: 100%;
+}
+.sec1 .deco1 {
+  left: 50%;
+  top: 30px;
+}
+.sec1 .deco2 {
+  top: 70%;
+  left: 10%;
+}
+.sec1 .deco3 {
+  top: 50%;
+  left: 85%;
+}
+.sec1 .deco4 {
+  top: 85%;
+  left: 90%;
+}
+.sec1 .deco5 {
+  top: 20%;
+  left: 20%;
+}
+.sec1 .deco6 {
+  left: 70%;
+  top: 10%;
+}
+.sec1 .deco7 {
+  top: 70%;
+  left: 70%;
+}
+.sec1 .deco8 {
+  top: 90%;
+  left: 47%;
+}
+.sec1 .deco9 {
+  top: 33%;
+  left: 10%;
+}
+.sec1 .deco10 {
+  left: 92%;
+  top: 5%;
+}
+.sec1 .deco11 {
+  top: 5%;
+  left: 10%;
+}
+.sec1 .deco12 {
+  left: 85%;
+  top: 20%;
+}
+
+.guage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.guage .curr {
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .guage {
+    display: none;
+  }
+}
+
+.fix-num {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  font-size: 3vw;
+  color: #fff;
+  padding: 20px;
+  font-family: "pret";
+  font-weight: 300;
+}
+.fix-num img {
+  display: inline-block;
+  margin-left: 10px;
+  /* 이미지와 글 사이 간격 조정 */
+  vertical-align: text-bottom;
+  /* 이미지 수직 정렬 */
+}
+@media (max-width: 768px) {
+  .fix-num {
+    display: none;
+  }
+}

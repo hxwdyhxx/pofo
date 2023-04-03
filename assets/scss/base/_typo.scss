@@ -1,0 +1,40 @@
+/* 폰트 셋팅 */
+/*세방고딕*/
+
+@font-face {
+    font-family: 'Nekst';
+    src: url(../font/Nekst-Regular.woff) format('woff');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url(../font/Nekst-Medium.woff) format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Nekst';
+    src: url(../font/Nekst-SemiBold.woff) format('woff');
+    font-weight: 600;
+}
+
+
+@font-face {
+    font-family: 'pret';
+    src: url(../font/Pretendard-Light.woff2) format('woff2');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'pret';
+    src: url(../font/Pretendard-Regular.woff2) format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'pret';
+    src: url(../font/Pretendard-Medium.woff2) format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'pret';
+    src: url(../font/Pretendard-Bold.woff2) format('woff2');
+    font-weight: 700;
+}
