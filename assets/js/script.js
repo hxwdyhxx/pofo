@@ -30,22 +30,22 @@ ScrollTrigger.matchMedia({
                         img.src = "https://raw.githubusercontent.com/hxxppy/pofo/main/assets/images/hear.PNG";
                     } else if (curr >= 80 && curr <= 99) {
                         curr = `${curr}%`
-                        img.src = "../assets/images/luck.png";
+                        img.src = "https://github.com/hxxppy/pofo/blob/main/assets/images/luck.PNG?raw=true";
                     } else if (curr >= 60 && curr <= 79) {
                         curr = `${curr}%`
-                        img.src = "../assets/images/ho.png";
+                        img.src = "https://raw.githubusercontent.com/hxxppy/pofo/main/assets/images/ho.PNG";
                     } else if (curr >= 40 && curr <= 59) {
                         curr = `${curr}%`
-                        img.src = "../assets/images/th.png";
+                        img.src = "https://github.com/hxxppy/pofo/blob/main/assets/images/th.PNG?raw=true";
                     } else if (curr >= 15 && curr <= 39) {
                         curr = `${curr}%`
-                        img.src = "../assets/images/la.png";
+                        img.src = "https://github.com/hxxppy/pofo/blob/main/assets/images/la.PNG?raw=true";
                     } else if (curr >= 1 && curr <= 14) {
                         curr = `${curr}%`
-                        img.src = "../assets/images/horr.png";
+                        img.src = "https://github.com/hxxppy/pofo/blob/main/assets/images/horr.PNG?raw=true";
                     } else if (curr == 0) {
                         curr = '안녕하세요';
-                        img.src = "../assets/images/hello.png";
+                        img.src = "https://github.com/hxxppy/pofo/blob/main/assets/images/hello.PNG?raw=true";
                     } else {
                         curr = `${curr}%`
                         img.style.display = 'none'
