@@ -211,6 +211,7 @@ body::-webkit-scrollbar-track {
 .title-wrap em {
   font-size: 28px;
   font-weight: bold;
+  word-break: normal;
 }
 .title-wrap p {
   font-size: 25px;
