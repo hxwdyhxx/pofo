@@ -213,11 +213,23 @@ body::-webkit-scrollbar-track {
   font-weight: bold;
   word-break: normal;
 }
+@media (max-width: 768px) {
+  .title-wrap em {
+    font-size: 25px;
+  }
+}
 .title-wrap p {
   font-size: 25px;
   max-width: 60%;
   font-family: "pret";
   line-height: 1.2;
+  word-break: keep-all;
+}
+@media (max-width: 768px) {
+  .title-wrap p {
+    max-width: 80%;
+    font-size: 23px;
+  }
 }
 .title-wrap .spec {
   display: flex;

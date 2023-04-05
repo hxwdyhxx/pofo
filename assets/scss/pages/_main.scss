@@ -75,6 +75,9 @@
         font-weight: bold;
         // margin-bottom: 5px;
         word-break: normal;
+        @include mobile-md {
+           font-size: 25px;
+        }
     }
 
     p {
@@ -82,6 +85,12 @@
         max-width: 60%;
         font-family: 'pret';
         line-height: 1.2;
+        word-break: keep-all;
+
+        @include mobile-md {
+            max-width: 80%;
+            font-size: 23px;
+        }
     }
 
     .spec {
